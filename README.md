@@ -23,7 +23,7 @@ The training of the model was performed using transfer learning, where a pre-tra
 - OpenCV
 ## Installation
 - Navigate to the project directory:<br>
-<code>cd Flask-Video-Object-Annotation-Mask-RCNN</code><br>
+<code>cd Flask_Video_Object_Annotation_Mask-RCNN</code><br>
 - Create a virtual environment with conda:
 <br><code>conda create -n [environment] python=3.6.12</code><br>
 - Activate the virtual environment:
