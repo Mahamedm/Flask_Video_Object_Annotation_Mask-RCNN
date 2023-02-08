@@ -6,7 +6,7 @@ This project is a web-based platform that allows users to annotate objects in vi
 ## Model
 The project uses [Mask R-CNN](https://arxiv.org/abs/1703.06870), a state-of-the-art object instance segmentation and classification model. The model was trained on the [MS-COCO dataset](https://cocodataset.org/#home), which contains 80 different object categories and 330k images.
 
-The MS-COCO dataset provides a diverse set of images for training and validation, making it suitable for various real-world scenarios. The model achieved high accuracy in detecting and segmenting objects from the MS-COCO dataset, with a mAP (mean Average Precision) of 0.38 and an IoU (Intersection over Union) of 0.33 on the validation set.
+The MS-COCO dataset provides a diverse set of images for training and validation, making it suitable for various real-world scenarios. The model achieved high accuracy in detecting and segmenting objects from the MS-COCO dataset, with a mAP (mean Average Precision) of 0.544 and an IoU (Intersection over Union) of 0.5 on the validation set.
 
 The training of the model was performed using transfer learning, where a pre-trained model was fine-tuned on the MS-COCO dataset to produce a model optimized for this specific use case. This approach allowed the model to quickly converge to good performance while using a relatively small amount of training data.
 
