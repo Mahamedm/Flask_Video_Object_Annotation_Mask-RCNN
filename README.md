@@ -1,4 +1,5 @@
 # Flask Video Object Annotation - Mask RCNN
+![Screenshot_20230208_011744](https://user-images.githubusercontent.com/52294485/217532497-bbb4af18-ccd8-499c-9dc5-862ecec16a89.png)
 ## Introduction
 This project is a web-based platform that allows users to annotate objects in videos using Mask RCNN. The platform is built using Flask, a Python-based web framework, and the Mask RCNN deep learning model, developed for object detection and instance segmentation.
 
