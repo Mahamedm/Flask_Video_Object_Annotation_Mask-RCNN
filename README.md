@@ -28,7 +28,7 @@ The training of the model was performed using transfer learning, where a pre-tra
 - Activate the virtual environment:
 <br><code>conda activate [environment]</code><br>
 - Install the required packages:
-<br><code>pip install -r requirements.txt</code><br>
+<br><code>[environment path]/python.exe -m pip install -r requirements.txt</code><br>
 ## Usage
 - Run: <code>app</code> or open <code>flask_app</code> with anaconda | vs-code | google colab.
 - Navigate to **[localhost](http://localhost:5000)** in your web browser.
