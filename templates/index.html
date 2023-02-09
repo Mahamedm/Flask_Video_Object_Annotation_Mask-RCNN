@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>VOA</title>
+    <style>
+        /* make every thing horizantoly center */
+        body {
+            background-color: #E5E5E5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: 'Open Sans', sans-serif;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 36px;
+            font-weight: bold;
+        }
+        h1:first-of-type {
+            color: #333;
+            font-family: 'Arial Black', Gadget, sans-serif;
+            /* text-shadow: 0px 4px 4px #000000; */
+            /* margin-bottom: 15%; */
+        }
+        div .form_first {
+            background-color: #fff;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            margin-left: 65px;
+            width: 500px;
+            margin-bottom: 40px;
+        }
+        form p {
+            color: #333;
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+        form input[type="file"] {
+            display: block;
+            margin: 0 auto;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        form input[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        /* class for div */
+        .div1 {
+            margin-top: 40px;
+            background-color: #f2f2f2;
+            padding: 20px;
+            border-radius: 10px;
+            /* text color */
+            color: #333;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Video Object Annotation</h1>
+        <form action="/process_video" method="post" enctype="multipart/form-data">
+            <div class="form_first">
+                <p>Select what objects to detect below before uploading.<br> The video processing may take long depending on your system.<br> Once done, you'll be prompted to download the video with selected objects highlighted.</p>
+                <input type="file" name="video">
+                <input type="submit" value="Upload">
+            </div>
+        <div class="div1">
+            <table>
+                <tr>
+                    <td><input type="checkbox" name="classes" value="BG">BG</td>
+                    <td><input type="checkbox" name="classes" value="airplane">airplane</td>
+                    <td><input type="checkbox" name="classes" value="apple">apple</td>
+                    <td><input type="checkbox" name="classes" value="backpack">backpack</td>
+                    <td><input type="checkbox" name="classes" value="banana">banana</td>
+                    <td><input type="checkbox" name="classes" value="baseball bat">baseball bat</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="classes" value="baseball glove">baseball glove</td>
+                    <td><input type="checkbox" name="classes" value="bear">bear</td>
+                    <td><input type="checkbox" name="classes" value="bed">bed</td>
+                    <td><input type="checkbox" name="classes" value="bench">bench</td>
+                    <td><input type="checkbox" name="classes" value="bicycle">bicycle</td>
+                    <td><input type="checkbox" name="classes" value="bird">bird</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="classes" value="boat">boat</td>
+                    <td><input type="checkbox" name="classes" value="book">book</td>
+                    <td><input type="checkbox" name="classes" value="bottle">bottle</td>
+                    <td><input type="checkbox" name="classes" value="bowl">bowl</td>
+                    <td><input type="checkbox" name="classes" value="broccoli">broccoli</td>
+                    <td><input type="checkbox" name="classes" value="bus">bus</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="classes" value="cake">cake</td>
+                    <td><input type="checkbox" name="classes" value="car">car</td>
+                    <td><input type="checkbox" name="classes" value="carrot">carrot</td>
+                    <td><input type="checkbox" name="classes" value="cat">cat</td>
+                    <td><input type="checkbox" name="classes" value="cell phone">cell phone</td>
+                    <td><input type="checkbox" name="classes" value="chair">chair</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="classes" value="clock">clock</td>
+                    <td><input type="checkbox" name="classes" value="couch">couch</td>
+                    <td><input type="checkbox" name="classes" value="cow">cow</td>
+                    <td><input type="checkbox" name="classes" value="cup">cup</td>
+                    <td><input type="checkbox" name="classes" value="dining table">dining table</td>
+                    <td><input type="checkbox" name="classes" value="dog">dog</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="classes" value="donut">donut</td>
+                    <td><input type="checkbox" name="classes" value="elephant">elephant</td>
+                    <td><input type="checkbox" name="classes" value="fire hydrant">fire hydrant</td>
+                    <td><input type="checkbox" name="classes" value="fork">fork</td>
+                    <td><input type="checkbox" name="classes" value="frisbee">frisbee</td>
+                    <td><input type="checkbox" name="classes" value="giraffe">giraffe</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="classes" value="hair drier">hair drier</td>
+                    <td><input type="checkbox" name="classes" value="handbag">handbag</td>
+                    <td><input type="checkbox" name="classes" value="horse">horse</td>
+                    <td><input type="checkbox" name="classes" value="hot dog">hot dog</td>
+                    <td><input type="checkbox" name="classes" value="keyboard">keyboard</td>
+                    <td><input type="checkbox" name="classes" value="kite">kite</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="classes" value="knife">knife</td>
+                    <td><input type="checkbox" name="classes" value="laptop">laptop</td>
+                    <td><input type="checkbox" name="classes" value="microwave">microwave</td>
+                    <td><input type="checkbox" name="classes" value="motorcycle">motorcycle</td>
+                    <td><input type="checkbox" name="classes" value="mouse">mouse</td>
+                    <td><input type="checkbox" name="classes" value="orange">orange</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="classes" value="oven">oven</td>
+                    <td><input type="checkbox" name="classes" value="parking meter">parking meter</td>
+                    <td><input type="checkbox" name="classes" value="person">person</td>
+                    <td><input type="checkbox" name="classes" value="pizza">pizza</td>
+                    <td><input type="checkbox" name="classes" value="potted plant">potted plant</td>
+                    <td><input type="checkbox" name="classes" value="refrigerator">refrigerator</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="classes" value="remote">remote</td>
+                    <td><input type="checkbox" name="classes" value="sandwich">sandwich</td>
+                    <td><input type="checkbox" name="classes" value="scissors">scissors</td>
+                    <td><input type="checkbox" name="classes" value="sheep">sheep</td>
+                    <td><input type="checkbox" name="classes" value="sink">sink</td>
+                    <td><input type="checkbox" name="classes" value="skateboard">skateboard</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="classes" value="skis">skis</td>
+                    <td><input type="checkbox" name="classes" value="snowboard">snowboard</td>
+                    <td><input type="checkbox" name="classes" value="spoon">spoon</td>
+                    <td><input type="checkbox" name="classes" value="sports ball">sports ball</td>
+                    <td><input type="checkbox" name="classes" value="stop sign">stop sign</td>
+                    <td><input type="checkbox" name="classes" value="suitcase">suitcase</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="classes" value="surfboard">surfboard</td>
+                    <td><input type="checkbox" name="classes" value="teddy bear">teddy bear</td>
+                    <td><input type="checkbox" name="classes" value="tennis racket">tennis racket</td>
+                    <td><input type="checkbox" name="classes" value="tie">tie</td>
+                    <td><input type="checkbox" name="classes" value="toaster">toaster</td>
+                    <td><input type="checkbox" name="classes" value="toilet">toilet</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="classes" value="toothbrush">toothbrush</td>
+                    <td><input type="checkbox" name="classes" value="traffic light">traffic light</td>
+                    <td><input type="checkbox" name="classes" value="train">train</td>
+                    <td><input type="checkbox" name="classes" value="truck">truck</td>
+                    <td><input type="checkbox" name="classes" value="tv">tv</td>
+                    <td><input type="checkbox" name="classes" value="umbrella">umbrella</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="classes" value="vase">vase</td>
+                    <td><input type="checkbox" name="classes" value="wine glass">wine glass</td>
+                    <td><input type="checkbox" name="classes" value="zebra">zebra</td>
+                </tr>
+            </table>
+        </div> 
+        </form>
+    </div>
+</body>
+</html>
